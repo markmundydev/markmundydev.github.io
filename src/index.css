@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'SF Pro Display', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+}
+
+/* 自定义类 */
+@layer components {
+  .section {
+    @apply min-h-screen w-full flex flex-col justify-center items-center p-8;
+  }
+  
+  .section-title {
+    @apply text-4xl md:text-5xl font-bold mb-8 text-center;
+  }
+  
+  .section-subtitle {
+    @apply text-xl md:text-2xl font-medium mb-4 text-center;
+  }
+}
